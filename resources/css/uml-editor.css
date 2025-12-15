@@ -18,6 +18,7 @@
     --uml-bg-secondary: #f8fafc;
     --uml-bg-canvas: #fdfdfe;
 
+
     /* Colores IA */
     --ai-primary: #6366f1;
     --ai-secondary: #8b5cf6;
@@ -1189,4 +1190,132 @@
     .joint-link {
         print-color-adjust: exact !important;
     }
+
+/* ===== THEME ROSA para UML Editor (solo estilos) ===== */
+
+:root{
+  --pink-50:#fff1f2;
+  --pink-100:#ffe4e6;
+  --pink-200:#fecdd3;
+  --pink-300:#fda4af;
+  --pink-500:#ec4899;
+  --pink-600:#db2777;
+  --pink-700:#be185d;
+  --ink:#4a044e;
+}
+
+/* Fondo general del editor */
+body{
+  background: linear-gradient(135deg, #fff1f2, #fff7ed, #ffe4e6) !important;
+}
+
+/* Barra superior dentro del editor (donde están Guardar/Limpiar/Exportar) */
+.toolbar,
+.topbar,
+.editor-toolbar,
+header.toolbar,
+nav.toolbar{
+  background: rgba(255,255,255,.75) !important;
+  border-bottom: 1px solid var(--pink-200) !important;
+  backdrop-filter: blur(10px);
+}
+
+/* Panel izquierdo */
+.sidebar,
+.left-panel,
+.tools-panel,
+#tools-panel{
+  background: rgba(255,255,255,.70) !important;
+  border-right: 1px solid var(--pink-200) !important;
+}
+
+/* Tarjetitas/bloques */
+.card,
+.panel,
+.box,
+.widget{
+  border: 1px solid var(--pink-200) !important;
+  border-radius: 16px !important;
+}
+
+/* Botones estilo “bootstrap-like” (si los estás usando) */
+.btn{
+  border-radius: 12px !important;
+  border: 1px solid var(--pink-200) !important;
+  box-shadow: 0 6px 18px rgba(219,39,119,.10) !important;
+}
+
+.btn-primary{
+  background: var(--pink-600) !important;
+  border-color: var(--pink-600) !important;
+}
+.btn-primary:hover{ background: var(--pink-700) !important; }
+
+.btn-danger{
+  background: #fb7185 !important;
+  border-color: #fb7185 !important;
+}
+.btn-danger:hover{ background: #f43f5e !important; }
+
+.btn-success{
+  background: #10b981 !important;
+  border-color: #10b981 !important;
+}
+.btn-success:hover{ background: #059669 !important; }
+
+/* Botón “Exportar” dropdown si existe */
+.dropdown-menu{
+  border: 1px solid var(--pink-200) !important;
+  border-radius: 14px !important;
+}
+
+/* Items de herramientas (Seleccionar/Clase/etc) */
+.tool-item,
+.tool-button,
+.tools-panel button,
+.tools-panel .item{
+  border-radius: 14px !important;
+  border: 1px solid var(--pink-200) !important;
+  background: rgba(255,255,255,.75) !important;
+  color: var(--ink) !important;
+}
+.tool-item:hover,
+.tool-button:hover,
+.tools-panel button:hover{
+  background: var(--pink-50) !important;
+  border-color: var(--pink-300) !important;
+}
+
+/* Estado “activo” si tu UI le pone .active */
+.tool-item.active,
+.tool-button.active,
+.tools-panel button.active{
+  background: rgba(236,72,153,.12) !important;
+  border-color: var(--pink-500) !important;
+}
+
+/* Canvas / grid del JointJS */
+.joint-paper,
+#paper-container{
+  background: rgba(255,255,255,.55) !important;
+}
+
+/* Líneas y bordes del JointJS (suaviza un poco) */
+.joint-paper .grid{
+  opacity: .35 !important;
+}
+
+/* Botón flotante “Analizar con IA” (si es un button normal) */
+button.ai-btn,
+#ai-button,
+.fab-ai,
+.btn-ai{
+  background: linear-gradient(135deg, var(--pink-600), #a855f7) !important;
+  color: white !important;
+  border: none !important;
+  border-radius: 999px !important;
+  box-shadow: 0 12px 30px rgba(219,39,119,.25) !important;
+}
+
+
 }
